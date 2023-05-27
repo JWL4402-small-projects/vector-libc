@@ -61,12 +61,10 @@ Vector3 scale_vec3(Vector3 vec3, float scalar) {
 }
 
 float dot_vec3(Vector3 vec3_1, Vector3 vec3_2) {
-    float result = 
+    return 
         vec3_1.x * vec3_2.x +
         vec3_1.y * vec3_2.y +
         vec3_1.z * vec3_2.z;
-    
-    return result;
 }
 
 Vector3 cross_vec3(Vector3 vec3_1, Vector3 vec3_2) {
