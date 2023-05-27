@@ -10,7 +10,7 @@ float magnitude_vec3(Vector3 vec3) {
     );
 }
 
-Vector3 opposite_vec3(Vector3 vec3) {
+Vector3 reverse_vec3(Vector3 vec3) {
     Vector3 result = {
         -vec3.x,
         -vec3.y,
@@ -43,7 +43,7 @@ Vector3 add_vec3(Vector3 vec3_1, Vector3 vec3_2) {
 Vector3 sub_vec3(Vector3 vec3_1, Vector3 vec3_2) {
     Vector3 result;
 
-    result = add_vec3(vec3_1, opposite_vec3(vec3_2));
+    result = add_vec3(vec3_1, reverse_vec3(vec3_2));
 
     return result;
 }
