@@ -23,14 +23,12 @@ Vector3 opposite_vec3(Vector3 vec3) {
 Vector3 normalize_vec3(Vector3 vec3) {
     float scalar = 1 / magnitude_vec3(vec3);
 
-    Vector3 result = {
-        vec3.x * scalar,
-        vec3.y * scalar,
-        vec3.z * scalar
-    };
+    Vector3 result = scale_vec3(vec3, scalar);
 
     return result;
 }
+
+
 
 Vector3 add_vec3(Vector3 vec3_1, Vector3 vec3_2) {
     Vector3 result = {
@@ -46,6 +44,18 @@ Vector3 sub_vec3(Vector3 vec3_1, Vector3 vec3_2) {
     Vector3 result;
 
     result = add_vec3(vec3_1, opposite_vec3(vec3_2));
+
+    return result;
+}
+
+
+
+Vector3 scale_vec3(Vector3 vec3, float scalar) {
+    Vector3 result = {
+        vec3.x * scalar,
+        vec3.y * scalar,
+        vec3.z * scalar
+    };
 
     return result;
 }
